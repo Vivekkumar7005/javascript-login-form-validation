@@ -33,10 +33,11 @@ function form_validation(){
         document.querySelector('.invalid_text').innerText = 'Please enter a valid e-mail address !'
 
     }else if(securityPasswordLength <=12){
-        document.querySelector('.invalid_text').innerText = 'Password must be more than 12 charcter. !'
+        document.querySelector('.invalid_text').innerText = 'Password must be more than 12 charac. !'
 
     }else{
         document.querySelector('.invalid_text').innerText = '' 
+        document.querySelector('.success_message').innerText = 'Login Successful !!!'
     }
 
 }
