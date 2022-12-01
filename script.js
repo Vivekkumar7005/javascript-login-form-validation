@@ -32,12 +32,22 @@ function form_validation(){
     }else if(!emailId.match(emailStructure)){
         document.querySelector('.invalid_text').innerText = 'Please enter a valid e-mail address !'
 
-    }else if(securityPasswordLength <=12){
-        document.querySelector('.invalid_text').innerText = 'Password must be more than 12 charac. !'
+    }else if(securityPasswordLength <=0){
+            document.querySelector('.invalid_text').innerText = 'Password is required !!!'
+    
+    }else if(securityPasswordLength <=5){
+        document.querySelector('.invalid_text').innerText = 'Your password is too weak !!!'
+
+    }else if(securityPasswordLength <=10){
+        document.querySelector('.invalid_text').innerText = 'Your password is moderate !!!'
+
+    }else if(securityPasswordLength <=15){
+        document.querySelector('.invalid_text').innerText = '' 
+        document.querySelector('.success_message').innerText = 'Password is strong and submitted successfully !!!'
 
     }else{
         document.querySelector('.invalid_text').innerText = '' 
-        document.querySelector('.success_message').innerText = 'Login Successful !!!'
     }
 
 }
+
